@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <title>系統忙碌中 - 台灣高鐵 Taiwan High Speed Rail</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            
+            <img src="THSR.png" alt="THSR 本機圖片" class="logo-local">
+        </header>
+        
+        <main class="glass-card">
+            <h1>系統忙碌中，請稍候</h1>
+            <p class="status-msg">目前搶票人數過多，伺服器正在排隊處理您的請求。</p>
+            
+            <div class="progress-container">
+                <div class="progress-bar" id="progressBar"></div>
+            </div>
+            <p id="timerText">預計 10 秒後重新偵測...</p>
+
+            <section class="tips">
+                <h3>💡 常見問題協助</h3>
+                <ul>
+                    <li><strong>若您已進入付款頁面：</strong> 請檢查簡訊是否有扣款通知，切勿重新整理。</li>
+                    <li><strong>訂票紀錄查詢：</strong> 系統恢復後，您可以至「訂位紀錄查詢」確認。</li>
+                </ul>
+            </section>
+        </main>
+
+        <footer>
+            <p>© Taiwan High Speed Rail Corporation. All Rights Reserved.</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

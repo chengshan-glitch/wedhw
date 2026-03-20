@@ -1,0 +1,126 @@
+:root {
+    --thsr-orange: #f58220;
+    --thsr-gray: #5e6063;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Microsoft JhengHei", sans-serif;
+    background: linear-gradient(135deg, #f58220 0%, #ffc08b 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #333;
+}
+
+.container {
+    text-align: center;
+    width: 90%;
+    max-width: 620px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 18px;
+}
+
+.logo,
+.logo-local {
+    display: inline-block;
+    border-radius: 12px;
+    transition: all 0.25s ease;
+}
+
+.logo {
+    width: 190px;
+    filter: drop-shadow(0 3px 10px rgba(0,0,0,0.35));
+}
+
+.logo-local {
+    width: 140px;
+    border-radius: 8px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.logo:hover,
+.logo-local:hover {
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.32);
+}
+
+/* 玻璃擬態卡片 */
+.glass-card {
+    background: rgba(255, 255, 255, 0.82);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 24px;
+    padding: 36px 28px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+}
+
+.glass-card:hover {
+    transform: translateY(-3px);
+}
+
+.glass-card h1 {
+    font-size: 1.85rem;
+    color: var(--thsr-orange);
+    margin-bottom: 12px;
+}
+
+.status-msg {
+    font-size: 1rem;
+    color: var(--thsr-gray);
+    margin: 0 0 22px;
+}
+
+#timerText {
+    margin-top: 12px;
+    font-weight: 600;
+    color: #444;
+}
+
+.progress-container {
+    background: #eee;
+    height: 10px;
+    border-radius: 5px;
+    margin: 25px 0 10px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    background: var(--thsr-orange);
+    height: 100%;
+    width: 0%; /* 由 JS 控制 */
+    transition: width 0.1s linear;
+}
+
+.tips {
+    text-align: left;
+    background: rgba(255, 255, 255, 0.62);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    box-shadow: inset 0 0 0 1px rgba(0,0,0,0.04);
+    padding: 16px;
+    border-radius: 12px;
+    margin-top: 26px;
+}
+
+.tips h3 {
+    margin: 0 0 10px;
+    font-size: 1.05rem;
+    color: #333;
+}
+
+.tips ul {
+    padding-left: 20px;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
