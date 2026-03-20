@@ -7,24 +7,11 @@ const track = document.querySelector('.train-track');
 let audioPlayed = false;
 
 function playArrivalSound() {
-    // 使用 Web Audio API 生成簡單提示音
-    const AudioContext = window.AudioContext || window.webkitAudioContext;
-    if (!AudioContext) return;
-    const ctx = new AudioContext();
-    const osc = ctx.createOscillator();
-    const gain = ctx.createGain();
-
-    osc.type = 'sine';
-    osc.frequency.setValueAtTime(880, ctx.currentTime);
-    gain.gain.setValueAtTime(0.001, ctx.currentTime);
-    gain.gain.exponentialRampToValueAtTime(0.25, ctx.currentTime + 0.02);
-    gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.5);
-
-    osc.connect(gain);
-    gain.connect(ctx.destination);
-
-    osc.start();
-    osc.stop(ctx.currentTime + 0.5);
+    const audio = new Audio('Music_128k.mp3');
+    audio.volume = 0.5; // 50% 音量
+    audio.play().catch(err => {
+        console.log('音效播放失敗:', err);
+    });
 }
 
 function updateTimer() {
